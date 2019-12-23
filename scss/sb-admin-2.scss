@@ -10,11 +10,72 @@
 @import "utilities.scss";
 
 // Custom Components
-@import "dropdowns.scss";
-@import "navs.scss";
+// @import "dropdowns.scss";
+// @import "navs.scss";
 @import "buttons.scss";
 @import "cards.scss";
 @import "charts.scss";
-@import "login.scss";
-@import "error.scss";
-@import "footer.scss";
+// @import "login.scss";
+// @import "error.scss";
+// @import "footer.scss";
+
+.content--bg {
+  position: relative;
+
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+
+  &::before {
+    position: absolute;
+    content: "";
+    z-index: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+}
+.page-header {
+  position: relative;
+  color: #000000;
+}
+
+.table {
+  color: #000000;
+}
+
+.card-body__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  & .progress {
+    width: 100%;
+  }
+
+  & .custom-select {
+    width: 100%;
+  }
+}
+
+.table td:not(:first-child) {
+  text-align: center;
+}
+
+#map {
+  height: 100%;
+  min-height: 300px;
+}
+
+@media (min-width: 768px) {
+  .card-body__wrap & .progress {
+    width: 50%;
+  }
+  .card-body__wrap & .custom-select {
+    width: 50%;
+  }
+}
